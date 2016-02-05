@@ -12,11 +12,12 @@ import com.google.gson.JsonObject;
  * @author bmart
  */
 public class dbsample {
-    private static Connection getConnection() throws SQLException {
+  private static Connection getConnection() throws SQLException {
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            System.out.println("Class not found exception! " + e.getMessage());
+            System.out.println("Class not found exception! "
+                    + e.getMessage());
         }
 
         String host = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
@@ -28,7 +29,7 @@ public class dbsample {
         Connection con = DriverManager.getConnection(url, username, password);
         return con;
     }
-    
+
     public static String getJSON() {
         String output = "";
         try {

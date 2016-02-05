@@ -4,8 +4,8 @@
     Author     : bmart
 --%>
 
-<%@page import="java.dbsample"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.dbsample"%>
 <!DOCTYPE html>
 <html>
     <head>
