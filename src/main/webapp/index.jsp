@@ -13,6 +13,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% out.print(dbsample.getJSON(1));%>
+        <% out.print(dbsample.getJSON());%>
     </body>
 </html>
