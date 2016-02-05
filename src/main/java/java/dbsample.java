@@ -29,23 +29,23 @@ public class dbsample {
         return con;
     }
     
-    public static String getJSON(){
+    public static String getJSON() {
         String output = "";
-        try{
+        try {
             JsonArray arr = new JsonArray();
             Connection conn = getConnection();
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM people");
-            while (rs.next()){
+            while (rs.next()) {
                 JsonObject obj = new JsonObject();
-                obj.addProperty("id",rs.getInt("id"));
+                obj.addProperty("id", rs.getInt("id"));
                 obj.addProperty("name", rs.getString("name"));
                 obj.addProperty("bio", rs.getString("bio"));
                 arr.add(obj);
             }
             output = arr.toString();
             conn.close();
-        }catch(SQLException ex){
+        } catch (SQLException ex) {
             output = "SQL Exception Error: " + ex.getMessage();
         }
         return output;
