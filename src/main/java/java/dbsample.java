@@ -29,7 +29,7 @@ public class dbsample {
         return con;
     }
     
-    public static String getJSON(int d){
+    public static String getJSON(){
         String output = "";
         try{
             JsonArray arr = new JsonArray();
